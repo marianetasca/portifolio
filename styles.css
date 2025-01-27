@@ -273,32 +273,37 @@ p {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 10px 0 50px 0;
+
 }
 #services .service-top {
-    max-width: 80%;
-    margin: 0 auto;
+    width: 70%;
+    padding: 10px;
 }
 #services .service-bottom {
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    height: 100%;
+    flex-wrap: column;
+    width: 70%;
+    max-width: 70%;
+
 }
 #services .service-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 50px;
+    width: 100%;
+    height: 100%;
+    min-width: 70%;
+    overflow: hidden;
     border-radius: 10px;
     background-image: url(./img/img3.jpg);
     background-size: cover;
-    margin: 10px ;
     position: relative;
     z-index: 1;
-    overflow: hidden;
 }
 #services .service-item::after {
     content: '';
@@ -311,12 +316,11 @@ p {
     opacity: 0.7;
     z-index: -1;
 }
-/*#services .service-bottom .icon {
-    height: 40px;
-    width: 80px;
-    margin-bottom: 20px;
-    MUDA O TAMANHO
-}*/ 
+#services .service-bottom .icon {
+    height: 50px;
+    margin: 20px;
+    /* MUDA O TAMANHO */
+}
 
 #services .service-item h2 {
     font-size: 2rem;
@@ -325,19 +329,66 @@ p {
     text-transform: uppercase;
 }
 #services .service-item p {
-    color: white;
-    text-align: left;
+    color: white;  
+    padding: 10px;
+}
+#services .service-item a {
+    color: rgb(110, 0, 0);
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+#services .imgccaa {
+    padding: 0px 20px 20px 20px;
 }
 #services .fotos2 {
     height: 100%;
     width: 100%;
+    padding: 0px 20px 20px 20px;
 }
 #services .fotos2 img{
-    padding-top: 5px;
-    width: 90%;
+    padding: 0px 5px 5px 0px;
+    width: 100%;
     
 }
 /*services*/
+/* services2 */
+#services2 {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0 50px 0;
+}
+#services2 .service-top{
+    width: 70%;
+}
+#services2 .service-info {
+    padding: 30px;
+    width: 100%;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #2a445d 0%, #567387 100%);
+    color: white;
+    border-radius: 10px;
+}
+#services2 .service-info h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+#services2 .service-info p {
+    color:white;
+}
+#services2 .container2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* services2 */
 
 /*projetos*/
 #projects .projects {
@@ -426,14 +477,15 @@ p {
 #about .about {
     flex-direction: column-reverse;
     text-align: center;
-    max-width: 70%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 #about .col-right {
-    width: 100%;
-
+    width: 70%;
+    padding-bottom: 20px;
 }
+
 #about .col-right h2 {
     font-size: 1.8rem;
     font-weight: 500;
@@ -586,7 +638,7 @@ p {
     }
 }
 /*tablet*/
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) and (max-width: 1200px){
     .cta{
         font-size: 2.5rem;
         padding: 10px 25px;
@@ -602,8 +654,10 @@ p {
 
     /*service*/
     #services .services {
-        max-width: 70%;
         padding: 100px 0;
+    }
+    #services .fotos2 {
+        height: 80%;
     }
     /*service*/
 
@@ -672,7 +726,7 @@ p {
 /*contact*/
 }
 /*tablet*/
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px)  {
     #header .hamburguer {
         display: none;
     }
@@ -692,14 +746,14 @@ p {
     #header .nav-list ul a:after {
         display: none;
     }
+    
     #services .fotos2 {
         display: flex;
         flex-direction: row;
-        height: 450px;
+        height: 500px;
     }
-    #services img {
-        padding: 5px;
-    }
+   
+    
 
     #contact .contact {
         padding-top: 20px;
