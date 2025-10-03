@@ -3,27 +3,36 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 html {
     font-size: 10px;
     font-family: Cambria, Cochin, Georgia, sans-serif;
     scroll-behavior: smooth;
 }
+
 a {
     text-decoration: none;
 }
 
 .container {
-    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+#hero .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
 p {
     color: black;
     font-size: 1.4rem;
@@ -32,6 +41,7 @@ p {
     font-weight: 300;
     letter-spacing: 0.05rem;
 }
+
 .section-title {
     font-size: 4rem;
     font-weight: 300;
@@ -41,13 +51,15 @@ p {
     letter-spacing: 0.2rem;
     text-align: center;
 }
+
 .section-title span {
     color: rgb(15, 83, 89);
 }
+
 .cta {
     display: inline-block;
     padding: 10px 20px;
-    color:rgb(15, 83, 89);
+    color: rgb(15, 83, 89);
     background-color: transparent;
     border: 2px solid rgb(15, 83, 89);
     font-size: 2.5rem;
@@ -55,20 +67,24 @@ p {
     letter-spacing: 0.1rem;
     margin-top: 20px;
     transition: 0.3s ease;
-    transition-property: background-color, color; 
+    transition-property: background-color, color;
 }
+
 .cta:hover {
-    color:white;
+    color: white;
     background-color: rgb(15, 83, 89);
 }
+
 .brand h1 {
     font-size: 3rem;
     text-transform: uppercase;
     color: white;
 }
+
 .brand h1 span {
     color: rgb(15, 83, 89);
 }
+
 /*header*/
 #header {
     position: fixed;
@@ -79,11 +95,13 @@ p {
     height: auto;
     background-color: #00000045;
 }
+
 #header .header {
     min-height: 8vh;
     background-color: rgba(0, 0, 0, 0.505);
-    transition: .3s ease backgroundColor;
+    transition: .3s ease background-color;
 }
+
 #header .nav-bar {
     display: flex;
     align-items: center;
@@ -93,7 +111,9 @@ p {
     max-width: 1300px;
     padding: 0 10px;
 }
-#header .nav-list ul { /*menu lateral (celular)*/
+
+#header .nav-list ul {
+    /*menu lateral (celular)*/
     list-style: none;
     position: absolute;
     background-color: #0f181f;
@@ -107,11 +127,13 @@ p {
     align-items: center;
     z-index: 1;
     overflow-x: hidden;
-    transition: .8s ease left;
+    transition: .8s ease right;
 }
+
 #header .nav-list ul.active {
     right: 0;
 }
+
 #header .nav-list ul a {
     font-size: 2.5rem;
     font-weight: 500;
@@ -122,6 +144,7 @@ p {
     padding: 20px;
     display: block;
 }
+
 #header .nav-list ul a::after {
     content: attr(data-after);
     position: absolute;
@@ -132,15 +155,18 @@ p {
     font-size: 8rem;
     letter-spacing: 50px;
     z-index: -1;
-    transition: 3.s ease letter-spacing;
+    transition: 3s ease letter-spacing;
 }
+
 #header .nav-list ul li:hover a::after {
     transform: translate(-50%, -50%) scale(1);
     letter-spacing: initial;
 }
+
 #header .nav-list ul li:hover a {
     color: rgb(15, 83, 89);
 }
+
 #header .hamburguer {
     height: 60px;
     width: 60px;
@@ -156,6 +182,7 @@ p {
     transform: scale(.8);
     margin-right: 20px;
 }
+
 #header .hamburguer::after {
     position: absolute;
     content: '';
@@ -165,6 +192,7 @@ p {
     border: 3px solid white;
     animation: hamburguer_puls 1s ease infinite;
 }
+
 #header .hamburguer .bar {
     height: 2px;
     width: 30px;
@@ -172,6 +200,7 @@ p {
     background-color: white;
     z-index: -1;
 }
+
 #header .hamburguer .bar::after,
 #header .hamburguer .bar::before {
     content: '';
@@ -183,15 +212,19 @@ p {
     transition: .3s ease;
     transition-property: top, bottom;
 }
+
 #header .hamburguer .bar::after {
     top: 8px;
 }
+
 #header .hamburguer .bar::before {
     bottom: 8px;
 }
+
 #header .hamburguer.active .bar::before {
     bottom: 0;
 }
+
 #header .hamburguer.active .bar::after {
     top: 0;
 }
@@ -206,6 +239,7 @@ p {
     position: relative;
     z-index: 1;
 }
+
 /*fundo/opacacidade*/
 #hero::after {
     content: '';
@@ -218,12 +252,14 @@ p {
     opacity: 0.8;
     z-index: -1;
 }
-#hero .hero{
+
+#hero .hero {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 50px;
     justify-content: flex-start;
 }
+
 /*efeito*/
 #hero h1 {
     display: block;
@@ -234,16 +270,19 @@ p {
     animation: text_reveal 1s ease forwards;
     animation-delay: 1s;
 }
-#hero h1:nth-child(1){
+
+#hero h1:nth-child(1) {
     animation-delay: 1s;
-} 
-#hero h1:nth-child(2){
+}
+
+#hero h1:nth-child(2) {
     animation-delay: 2s;
-} 
-#hero h1:nth-child(3){
+}
+
+#hero h1:nth-child(3) {
     animation: text_reveal_name 0.5s ease forwards;
     animation-delay: 3s;
-} 
+}
 
 #hero h1 span {
     position: absolute;
@@ -255,15 +294,19 @@ p {
     animation: text_reveal_box 1s ease;
     animation-delay: 1s;
 }
+
 #hero h1:nth-child(1) span {
     animation-delay: 0.5s;
 }
+
 #hero h1:nth-child(2) span {
     animation-delay: 1.5s;
 }
+
 #hero h1:nth-child(3) span {
     animation-delay: 2.5s;
 }
+
 /*efeito*/
 
 
@@ -274,13 +317,15 @@ p {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 0 50px 0;
+    padding: 0px 0 80px 0;
 
 }
+
 #services .service-top {
     width: 70%;
     padding: 10px;
 }
+
 #services .service-bottom {
     margin-top: 10px;
     display: flex;
@@ -291,6 +336,7 @@ p {
     max-width: 70%;
 
 }
+
 #services .service-item {
     display: flex;
     align-items: center;
@@ -306,6 +352,7 @@ p {
     position: relative;
     z-index: 1;
 }
+
 #services .service-item::after {
     content: '';
     position: absolute;
@@ -317,6 +364,7 @@ p {
     opacity: 0.7;
     z-index: -1;
 }
+
 #services .service-bottom .icon {
     height: 50px;
     margin: 20px;
@@ -329,40 +377,48 @@ p {
     margin-bottom: 10px;
     text-transform: uppercase;
 }
+
 #services .service-item p {
-    color: white;  
+    color: white;
     padding: 10px;
 }
+
 #services .service-item a {
     color: rgb(110, 0, 0);
     text-transform: uppercase;
     text-align: center;
-    
+
 }
+
 #services .imgccaa {
     padding: 0px 20px 20px 20px;
 }
+
 #services .fotos2 {
     height: 100%;
     width: 100%;
     padding: 0px 20px 20px 20px;
 }
-#services .fotos2 img{
+
+#services .fotos2 img {
     padding: 0px 5px 5px 0px;
     width: 100%;
-    
+
 }
+
 /*services*/
 /* services2 */
 #services2 {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 0 50px 0;
+    padding: 0px 0 80px 0;
 }
-#services2 .service-top{
+
+#services2 .service-top {
     width: 70%;
 }
+
 #services2 .service-info {
     padding: 30px;
     width: 100%;
@@ -376,19 +432,23 @@ p {
     color: white;
     border-radius: 10px;
 }
+
 #services2 .service-info h1 {
     font-size: 3rem;
     font-weight: 500;
 }
+
 #services2 .service-info p {
-    color:white;
+    color: white;
 }
-#services2 .container2{
+
+#services2 .container2 {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 /* services2 */
 
 /*projetos*/
@@ -396,17 +456,20 @@ p {
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 0 50px 0;
+    padding: 0 0 80px 0;
 }
+
 #projects .projects-header h1 {
     margin-bottom: 30px;
 }
+
 #projects .all-projects {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
 #projects .project-item {
     display: flex;
     align-items: center;
@@ -417,6 +480,7 @@ p {
     overflow: hidden;
     border-radius: 10px;
 }
+
 #projects .project-info {
     padding: 30px;
     width: 100%;
@@ -429,15 +493,18 @@ p {
     background-image: linear-gradient(60deg, #061b2f 0%, #21323d 100%);
     color: white;
 }
+
 #projects .project-info h1 {
     font-size: 3rem;
     font-weight: 500;
 }
+
 #projects .project-info h2 {
     font-size: 1.8rem;
     font-weight: 500;
     margin-top: 10px;
 }
+
 #projects .project-info p {
     color: white;
 }
@@ -446,11 +513,13 @@ p {
     position: relative;
     overflow: hidden;
     background-image: url("./img/img3.jpg");
-}    
-#projects .img{
+}
+
+#projects .img {
     padding: 30px 35px 30px 35px;
 }
-#projects .project-img:after{
+
+#projects .project-img:after {
     content: '';
     position: absolute;
     left: 0;
@@ -458,19 +527,20 @@ p {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(60deg, #061b2f 0%, #21323d 100%);
-    opacity: 0.7; 
+    opacity: 0.7;
 }
 
 #projects .project-imgs img {
     transition: 0.3s ease transform;
 }
 
-#projects .project-item:hover .img{
+#projects .project-item:hover .img {
     transform: scale(1.1);
 }
+
 .projects .color {
     color: rgb(255, 44, 44);
-} 
+}
 
 /*projetos*/
 
@@ -480,11 +550,13 @@ p {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 0 80px 0;
+    min-height: none;
 }
 
 #about .col-right {
     width: 70%;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 #about .col-right h2 {
@@ -493,23 +565,26 @@ p {
     letter-spacing: .2rem;
     margin-bottom: 10px;
 }
+
 #about .col-right p {
     margin-bottom: 20px;
     display: contents;
     justify-content: center;
 
 }
+
 #about .col-left {
     width: 250px;
     height: 360px;
 }
-#about .col-left .about-img {
 
+#about .col-left .about-img {
     height: 100%;
     width: 100%;
     position: relative;
     border: 10px solid white;
 }
+
 #about .col-left .about-img::after {
     content: '';
     position: absolute;
@@ -520,6 +595,7 @@ p {
     border: 7px solid rgb(15, 83, 89);
     z-index: -1;
 }
+
 /*about*/
 
 /*contact*/
@@ -527,14 +603,17 @@ p {
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 80px;
     width: 90%;
     align-items: center;
 }
+
 #contact .contact-items {
     max-width: 400px;
     width: 100%;
 }
+
 #contact .contact-item {
     width: 80%;
     padding: 20px;
@@ -548,34 +627,41 @@ p {
     box-shadow: 0px 0px 20px 0px #00000096;
     transition: .3s ease box-shadow;
 }
+
 #contact .contact-item:hover {
     box-shadow: 0px 0px 5px 0 rgb(14, 47, 50);
 }
+
 #contact .icon {
     width: 70px;
     margin: 0 auto;
     margin-bottom: 10px;
 }
+
 #contact .contact-info h1 {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
+
 #contact .contact-info h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 500;
 }
+
 /*footer*/
 #footer {
     background-image: linear-gradient(60deg, #061b2f 0%, #21323d 100%);
 }
+
 #footer .footer {
     min-height: 200px;
     flex-direction: column;
     padding-top: 50px;
     padding-bottom: 10px;
 }
+
 #footer h2 {
     color: white;
     font-weight: 500;
@@ -584,26 +670,32 @@ p {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 #footer .social-icon {
     display: flex;
     margin-bottom: 30px;
 }
+
 #footer .social-item {
     height: 50px;
     width: 50px;
     margin: 0 5px;
 }
+
 #footer .social-item img {
     filter: grayscale(1);
     transition: .3s ease filter;
 }
+
 #footer .social-item:hover img {
     filter: grayscale(0);
 }
+
 #footer p {
     color: white;
     font-size: 1.3rem;
 }
+
 /*footer*/
 
 /*contact*/
@@ -612,54 +704,65 @@ p {
         opacity: 1;
         transform: scale(1);
     }
+
     100% {
         opacity: 0;
         transform: scale(1.4);
     }
 }
+
 @keyframes text_reveal_box {
     50% {
         width: 100%;
         left: 0;
     }
+
     100% {
         width: 0;
         left: 100%;
     }
 }
+
 @keyframes text_reveal {
-    100%{
+    100% {
         color: white;
     }
 }
+
 @keyframes text_reveal_name {
-    100%{
+    100% {
         color: rgb(15, 83, 89);
         font-weight: 500px;
     }
 }
+
 /*tablet*/
-@media only screen and (min-width: 768px) and (max-width: 1200px){
-    .cta{
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .cta {
         font-size: 2.5rem;
         padding: 10px 25px;
     }
-    h1.section-title{
+
+    h1.section-title {
         font-size: 5rem;
     }
+
     /*hero*/
     #hero h1 {
         font-size: 5rem;
     }
+
     /*hero*/
 
     /*service*/
     #services .services {
         padding: 100px 0;
     }
+
     #services .fotos2 {
         height: 80%;
     }
+
     /*service*/
 
     /*project*/
@@ -667,27 +770,33 @@ p {
         width: 100%;
         align-items: center;
     }
+
     #projects .all-projects .project-info {
         height: 100%;
     }
+
     #projects .all-projects .project-imgs {
         height: 100%;
     }
+
     /*project*/
 
     /*about*/
-    #about .about{
+    #about .about {
         flex-direction: column-reverse;
         max-width: 70%;
         margin: 0 auto;
     }
+
     #about .col-left {
         width: 250px;
         height: 360px;
     }
+
     #about .col-right {
         width: 100%;
     }
+
     #about .about .col-left .about-img::after {
         left: -30px;
         top: 20px;
@@ -695,6 +804,7 @@ p {
         width: 98%;
         border: 7px solid rgb(15, 83, 89);
     }
+
     #about .col-right {
         padding: 30px;
     }
@@ -709,28 +819,34 @@ p {
         padding: 100px 0;
         min-height: 20vh;
     }
+
     #contact .contact-items {
         width: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin: 0 ;
+        margin: 0;
     }
+
     #contact .contact-item {
         width: 80%;
         margin: 20px 0 15px 0;
     }
+
     #contact .contact-item .icon {
         height: 50px;
         width: 50px;
-    } 
-/*contact*/
+    }
+
+    /*contact*/
 }
-/*tablet*/
-@media only screen and (min-width: 1200px)  {
+
+/*desktop*/
+@media only screen and (min-width: 1200px) {
     #header .hamburguer {
         display: none;
     }
+
     #header .nav-list ul {
         position: initial;
         display: block;
@@ -738,27 +854,25 @@ p {
         width: fit-content;
         background-color: transparent;
     }
+
     #header .nav-list ul li {
         display: inline-block;
     }
+
     #header .nav-list ul li a {
         font-size: 1.8rem;
     }
+
     #header .nav-list ul a:after {
         display: none;
     }
-    
+
     #services .fotos2 {
         display: flex;
         flex-direction: row;
         height: 500px;
     }
-   
-    
 
-    #contact .contact {
-        padding-top: 20px;
-    }
     #contact .contact-items {
         display: flex;
         flex-direction: row;
@@ -766,19 +880,23 @@ p {
         justify-content: center;
         min-width: 100%;
     }
+
     #contact .contact-item {
         width: 350px;
         height: 250px;
         margin: 10px;
         flex-direction: row;
     }
+
     #contact .contact-item .icon {
         height: 80px;
         width: 80px;
     }
+
     #contact .contact-item .icon img {
         object-fit: contain;
     }
+
     #contact .contact-item .contact-info {
         width: 100%;
         text-align: left;
