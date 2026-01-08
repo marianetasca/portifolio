@@ -60,7 +60,7 @@ p {
     display: inline-block;
     padding: 10px 20px;
     color: rgb(15, 83, 89);
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.288);
     border: 2px solid rgb(15, 83, 89);
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -68,6 +68,7 @@ p {
     margin-top: 20px;
     transition: 0.3s ease;
     transition-property: background-color, color;
+    
 }
 
 .cta:hover {
@@ -82,8 +83,9 @@ p {
 }
 
 .brand h1 span {
-    color: rgb(15, 83, 89);
+    color: rgb(15, 83, 89);    
 }
+
 
 /*header*/
 #header {
@@ -164,7 +166,8 @@ p {
 }
 
 #header .nav-list ul li:hover a {
-    color: rgb(15, 83, 89);
+    color: rgb(17, 96, 103);
+    /* text-shadow: 1px 1px 0.1px #ffffffd5; */
 }
 
 #header .hamburguer {
@@ -235,10 +238,11 @@ p {
 #hero {
     background-image: url(img/20230707_100541.jpg);
     background-size: cover;
-    background-position: top center;
+    background-position: center center; /* centraliza imagem para evitar corte do assunto principal */
+    background-repeat: no-repeat;
     position: relative;
     z-index: 1;
-}
+} 
 
 /*fundo/opacacidade*/
 #hero::after {
@@ -248,7 +252,7 @@ p {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.874);
     opacity: 0.8;
     z-index: -1;
 }
@@ -309,14 +313,66 @@ p {
 
 /*efeito*/
 
+/*about*/
+#about .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0 40px 0;
+    min-height: none;
+}
+
+#about .col-right {
+    width: 70%;
+    padding-bottom: 10px;
+}
+
+#about .col-right h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about .col-right p {
+    margin-bottom: 20px;
+    display: contents;
+    justify-content: center;
+
+}
+
+#about .col-left {
+    width: 250px;
+    height: 360px;
+}
+
+#about .col-left .about-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid white;
+}
+
+#about .col-left .about-img::after {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid rgb(15, 83, 89);
+    z-index: -1;
+}
+/*about*/
 
 /*services*/
-
 #services .services {
     flex-direction: column;
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 40px;
     padding: 0px 0 80px 0;
 
 }
@@ -327,7 +383,7 @@ p {
 }
 
 #services .service-bottom {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -420,6 +476,7 @@ p {
 }
 
 #services2 .service-info {
+    margin-top: 20px;
     padding: 30px;
     width: 100%;
     flex-basis: 50%;
@@ -544,60 +601,6 @@ p {
 
 /*projetos*/
 
-/*about*/
-#about .about {
-    flex-direction: column-reverse;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 0 80px 0;
-    min-height: none;
-}
-
-#about .col-right {
-    width: 70%;
-    padding-bottom: 10px;
-}
-
-#about .col-right h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
-    letter-spacing: .2rem;
-    margin-bottom: 10px;
-}
-
-#about .col-right p {
-    margin-bottom: 20px;
-    display: contents;
-    justify-content: center;
-
-}
-
-#about .col-left {
-    width: 250px;
-    height: 360px;
-}
-
-#about .col-left .about-img {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    border: 10px solid white;
-}
-
-#about .col-left .about-img::after {
-    content: '';
-    position: absolute;
-    left: -30px;
-    top: 19px;
-    height: 98%;
-    width: 98%;
-    border: 7px solid rgb(15, 83, 89);
-    z-index: -1;
-}
-
-/*about*/
-
 /*contact*/
 #contact .contact {
     flex-direction: column;
@@ -656,11 +659,12 @@ p {
 }
 
 #footer .footer {
-    min-height: 200px;
+    min-height: 150px;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
+
 
 #footer h2 {
     color: white;
@@ -673,7 +677,7 @@ p {
 
 #footer .social-icon {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 #footer .social-item {
@@ -694,6 +698,7 @@ p {
 #footer p {
     color: white;
     font-size: 1.3rem;
+    margin-bottom: 0px;
 }
 
 /*footer*/
@@ -720,19 +725,21 @@ p {
     100% {
         width: 0;
         left: 100%;
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
     }
-}
+} 
 
 @keyframes text_reveal {
     100% {
         color: white;
+        text-shadow: 2px 2px 3px rgb(0, 0, 0); /* sombra só no final */
     }
 }
 
 @keyframes text_reveal_name {
     100% {
         color: rgb(15, 83, 89);
-        font-weight: 500px;
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
     }
 }
 
@@ -843,6 +850,12 @@ p {
 
 /*desktop*/
 @media only screen and (min-width: 1200px) {
+    /* Ajuste da imagem de fundo no desktop para evitar cortes */
+    #hero {
+        /* mover o foco verticalmente para baixo (30%) para trazer a cabeça para a área visível) */
+        background-position: center 20%;
+        background-size: cover;
+    }
     #header .hamburguer {
         display: none;
     }
